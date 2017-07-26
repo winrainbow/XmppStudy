@@ -1,0 +1,48 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        
+    }
+
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task (hgj).doLast {
+    println "start execute yugangshuo"
+    haveFun()
+}
+
+def haveFun() {
+    println "have fun!"
+    System.out.println("have fun!");
+    1
+    def file1 = new File("a.txt")
+    def file2 = new File("a.txt")
+    assert file1 == file2
+    assert !file1.is(file2)
+}
+
+class Book {
+    private String name
+    String getName() { return name }
+    void setName(String name) { this.name = name }
+}
+
